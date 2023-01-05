@@ -5,7 +5,6 @@ const Comment = require("../models/Comment")
 module.exports = {
 
     createComment: async (req, res) => {
-        console.log(' hi i got this far')
         try {
             await Comment.create({
                 message: req.body.comment,
