@@ -24,19 +24,19 @@
         <%}%>
       </div>
     </div>
-    <div class="col-3 mt-5">
+    <div class="col-5 mt-4">
       <p><%= post.caption %></p>
+      <!-- display comments -->
+      <ul>
+        <% for(var i=0; i<comment.length; i++) {%>
+          <div class="col-15 mt-5">
+            <li><%=comment[i].message%></li>
+          </div>
+        <% } %>
+      </ul>
     </div>
 
     
-    <!-- display comments -->
-    <ul>
-      <% for(var i=0; i<comment.length; i++) {%>
-        <div class="col-3 mt-5">
-          <li><%=comment[i]._id%></li>
-        </div>
-      <% } %>
-    </ul>
 
 <!-- add a comment -->
     <div class="mt-5">
